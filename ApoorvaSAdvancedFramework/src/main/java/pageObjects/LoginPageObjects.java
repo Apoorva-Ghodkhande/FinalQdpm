@@ -8,9 +8,9 @@ import testBase.TestBase;
 
 public class LoginPageObjects extends TestBase  {
 
-	By EMAIL = By.name("login[email]");
-	By PASSWORD = By.name("login[password]");
-	By LOGIN_BTN = By.xpath("//button[@type='submit' and text()='Login ']");
+	private By EMAIL = By.name("login[email]");
+	private By PASSWORD = By.name("login[password]");
+	private By LOGIN_BTN = By.xpath("//button[@type='submit' and text()='Login ']");
 
 
 	//login to App
