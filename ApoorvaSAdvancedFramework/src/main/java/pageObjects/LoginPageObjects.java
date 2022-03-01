@@ -11,6 +11,7 @@ public class LoginPageObjects extends TestBase  {
 	private By EMAIL = By.name("login[email]");
 	private By PASSWORD = By.name("login[password]");
 	private By LOGIN_BTN = By.xpath("//button[@type='submit' and text()='Login ']");
+    By FORGOT_PASSWORD = By.xpath("//a[text()='Password forgotten?']");
 
 
 	//login to App
@@ -22,6 +23,14 @@ public class LoginPageObjects extends TestBase  {
 
 	}
 
+	public String forgotPasword()
+	{
+		
+		click_custom(DriverFactory.getInstance().getDriver().findElement(FORGOT_PASSWORD),"ForgotPassword link ");
+		String Title=DriverFactory.getInstance().getDriver().getTitle();
+		
+		return Title;
+	}
 
 }
 
