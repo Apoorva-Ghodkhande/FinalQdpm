@@ -9,12 +9,13 @@ import pageObjects.LoginPageObjects;
 import testBase.TestBase;
 
 public class TC_0002_PasswordForgot extends TestBase {
-  LoginPageObjects login = new LoginPageObjects();
+
+  //LoginPageObjects login = new LoginPageObjects();
   @Test
   public void VerifyForgotPassworPage()
   {
-	  String ActualTitle=login.forgotPasword();
-	  
+	  String ActualTitle=page.getPageInstance(LoginPageObjects.class).forgotPasword();
+	//String ActualTitle=login.forgotPasword();
 	  String ExpectedTitle="qdPM | Restore Password";
 	  Assert.assertEquals(ActualTitle, ExpectedTitle);
 	  

@@ -11,14 +11,10 @@ import com.aventstack.extentreports.Status;
 import testBase.DriverFactory;
 import testBase.ExtentFactory;
 
-/**
- * @author: Prakash Narkhede
- * @Youtube: https://www.youtube.com/automationtalks
- * @LinkedIn: https://www.linkedin.com/in/panarkhede89/
- */
-public class ActionEngine {
+public class ActionEngine implements ForPageObjectsInterface{
 
 	//Customized sendkeys method-> To log sendkeys message for every occ.
+	@Override
 	public void sendKeys_custom(WebElement element, String fieldName, String valueToBeSent) {
 		try {
 			element.sendKeys(valueToBeSent);

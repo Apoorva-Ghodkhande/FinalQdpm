@@ -10,7 +10,8 @@
 
 		<test name="DataDriven Tests">
 		<classes>
-		<class name="Tests.TestCase" /> 
+		<!--<class name="Tests.TestCase" /> -->
+		<class name="Tests.TC_0002_PasswordForgot" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

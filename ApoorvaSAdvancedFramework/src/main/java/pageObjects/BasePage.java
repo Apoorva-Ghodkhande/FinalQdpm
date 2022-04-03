@@ -6,11 +6,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.aventstack.extentreports.Status;
 
+import reusableComponents.ActionEngine;
+import reusableComponents.ForPageObjectsInterface;
 import testBase.DriverFactory;
 import testBase.ExtentFactory;
 
 public class BasePage extends Page {
 
+	ForPageObjectsInterface action = new ActionEngine();
 	@Override
 	public String getPageTitle() {
 	 return DriverFactory.getInstance().getDriver().getTitle();

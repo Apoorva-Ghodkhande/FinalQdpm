@@ -15,7 +15,7 @@ public abstract class Page {
 	public Page()
 	{
 		
-		wait= new WebDriverWait(DriverFactory.getInstance().getDriver(), 15);
+		//wait= new WebDriverWait(DriverFactory.getInstance().getDriver(), 15);
 	}
 	
 	public abstract String getPageTitle();
@@ -33,7 +33,7 @@ public abstract class Page {
 	{
 		
 		try {
-			return pageClass.getDeclaredConstructor(WebDriver.class).newInstance();
+			return pageClass.getDeclaredConstructor().newInstance();
 		
 		}catch(Exception e) {
 			e.printStackTrace();

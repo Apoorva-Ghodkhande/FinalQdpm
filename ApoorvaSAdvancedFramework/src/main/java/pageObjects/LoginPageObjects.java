@@ -2,11 +2,12 @@ package pageObjects;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import testBase.DriverFactory;
 import testBase.TestBase;
 
-public class LoginPageObjects extends TestBase  {
+public class LoginPageObjects extends BasePage  {
 
 	private By EMAIL = By.name("login[email]");
 	private By PASSWORD = By.name("login[password]");
@@ -14,19 +15,20 @@ public class LoginPageObjects extends TestBase  {
     By FORGOT_PASSWORD = By.xpath("//a[text()='Password forgotten?']");
 
 
+
 	//login to App
 	public void login(String email, String password) {
-		sendKeys_custom(DriverFactory.getInstance().getDriver().findElement(EMAIL), "LoginEmailFIeld", email);
-		sendKeys_custom(DriverFactory.getInstance().getDriver().findElement(PASSWORD), "LoginPasswordFIeld", password);
+		action.sendKeys_custom(DriverFactory.getInstance().getDriver().findElement(EMAIL), "LoginEmailFIeld", email);
+		action.sendKeys_custom(DriverFactory.getInstance().getDriver().findElement(PASSWORD), "LoginPasswordFIeld", password);
 
-		click_custom(DriverFactory.getInstance().getDriver().findElement(LOGIN_BTN), "LoginButton");
+		action.click_custom(DriverFactory.getInstance().getDriver().findElement(LOGIN_BTN), "LoginButton");
 
 	}
 
 	public String forgotPasword()
 	{
 		
-		click_custom(DriverFactory.getInstance().getDriver().findElement(FORGOT_PASSWORD),"ForgotPassword link ");
+		action.click_custom(DriverFactory.getInstance().getDriver().findElement(FORGOT_PASSWORD),"ForgotPassword link ");
 		String Title=DriverFactory.getInstance().getDriver().getTitle();
 		
 		return Title;
