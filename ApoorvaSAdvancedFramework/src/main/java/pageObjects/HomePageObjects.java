@@ -10,7 +10,7 @@ import org.testng.Assert;
 import testBase.DriverFactory;
 import testBase.TestBase;
 
-public class HomePageObjects extends TestBase{
+public class HomePageObjects extends BasePage{
 
 
 	By sidebarMenu_Dashboard = By.xpath("//ul[@class='page-sidebar-menu']//i/following-sibling::span[text()='Dashboard']");
@@ -30,7 +30,7 @@ public class HomePageObjects extends TestBase{
 	}
 
 	public void checkIfDashBoardPageIsOpened() {
-		Assert.assertTrue(isElementPresent_custom(DriverFactory.getInstance().getDriver().findElement(sidebarMenu_Dashboard), "DashBoardMenu"));
+		Assert.assertTrue(action.isElementPresent_custom(DriverFactory.getInstance().getDriver().findElement(sidebarMenu_Dashboard), "DashBoardMenu"));
 	}
 
 }

@@ -5,22 +5,21 @@ import java.util.concurrent.TimeUnit;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import pageObjects.BasePage;
+import pageObjects.Page;
 import reusableComponents.ActionEngine;
 import reusableComponents.PropertiesOperations;
 
-/**
- * @author: Prakash Narkhede
- * @Youtube: https://www.youtube.com/automationtalks
- * @LinkedIn: https://www.linkedin.com/in/panarkhede89/
- */
+
+
 public class TestBase extends ActionEngine {
 	BrowserFactory bf = new BrowserFactory();
-
+	public Page page= new BasePage();
 	@BeforeMethod
 	public void LaunchApplication() throws Exception {
 		String browser = PropertiesOperations.getPropertyValueByKey("browser");
 		String url = 	PropertiesOperations.getPropertyValueByKey("url");
-
+       
 		DriverFactory.getInstance().setDriver(bf.createBrowserInstance(browser));
 
 		DriverFactory.getInstance().getDriver().manage().window().maximize();

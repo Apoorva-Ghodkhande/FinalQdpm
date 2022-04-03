@@ -20,7 +20,8 @@ import testBase.TestBase;
 
 public class TestCase extends TestBase{
 	LoginPageObjects loginPage = new LoginPageObjects();
-	HomePageObjects homePage = new HomePageObjects();
+	//HomePageObjects homePage = new HomePageObjects();
+	HomePageObjects homePage = page.getPageInstance(HomePageObjects.class);
 	//TaskPageObjects taskPage = new TaskPageObjects();
 	//DB_Operations dbOps = new DB_Operations();
 
