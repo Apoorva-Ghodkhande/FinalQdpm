@@ -16,5 +16,10 @@ public class UsersPageObjects {
 	By btn_UserPhoto = By.id("users_photo");
 	By btn_Save = By.id("submit_button");
 	By chk_notifyUser = By.id("users_notify");
-
+	
+	public void toCheckfromWorkingDirectory()
+	{
+	System.out.println("changes in Working Directory");
+	}
+		
 }
