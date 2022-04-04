@@ -28,6 +28,9 @@ public void toCheckfromMaster()
 {
 System.out.println("Direct change in master from gitHub");
 }
-	
+public void toCheckfromMaster2()
+{
+System.out.println("Direct change in master from gitHub");
+}	
 
 }
