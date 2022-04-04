@@ -33,7 +33,14 @@ public class LoginPageObjects extends BasePage  {
 		
 		return Title;
 	}
-
+	public String forgotPasword1()
+	{
+		
+		action.click_custom(DriverFactory.getInstance().getDriver().findElement(FORGOT_PASSWORD),"ForgotPassword link ");
+		String Title=DriverFactory.getInstance().getDriver().getTitle();
+		
+		return Title;
+	}
 }
 
 
