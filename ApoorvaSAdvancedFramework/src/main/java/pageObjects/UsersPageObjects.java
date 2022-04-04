@@ -16,5 +16,9 @@ public class UsersPageObjects {
 	By btn_UserPhoto = By.id("users_photo");
 	By btn_Save = By.id("submit_button");
 	By chk_notifyUser = By.id("users_notify");
-
+public void toCheckfromMaster()
+{
+System.out.println("Direct change in master from gitHub");
+}
+	
 }
