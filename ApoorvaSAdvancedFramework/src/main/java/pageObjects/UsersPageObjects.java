@@ -22,7 +22,10 @@ public class UsersPageObjects {
 	{
 	System.out.println("changes in Working Directory");
 	}
-		
+	public void toCheckfromWorkingDirectory2()
+	{
+	System.out.println("changes in Working Directory");
+	}		
 
 public void toCheckfromMaster()
 {
