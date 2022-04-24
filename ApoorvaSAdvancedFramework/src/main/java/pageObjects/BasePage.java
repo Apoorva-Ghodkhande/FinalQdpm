@@ -14,6 +14,11 @@ import testBase.ExtentFactory;
 public class BasePage extends Page {
 
 	ForPageObjectsInterface action = new ActionEngine();
+
+   public BasePage() {
+	super();
+   }	
+	
 	@Override
 	public String getPageTitle() {
 	 return DriverFactory.getInstance().getDriver().getTitle();
